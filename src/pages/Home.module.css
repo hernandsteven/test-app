@@ -1,0 +1,28 @@
+.home_container {
+    height: 100vh;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    background-color: darkslateblue;
+}
+.home_header{
+    color: white;
+}
+.home_button_row {
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    justify-content: space-around;
+    border-bottom: 1px solid yellow;
+}
+.home_button {
+    color: white;
+}
+
+.home_button:hover{
+    color:gold;
+    border-color: gold;
+}
+
+
