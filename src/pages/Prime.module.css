@@ -12,21 +12,20 @@
 
 .prime_component_column {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content:start;
     align-items: center;
-    align-content: center;
+    border:1px solid white;
     border-radius: 10px;
     width: 90vw;
+    height:100vh;
 
 }
+ .prime_component_row {
+     display: flex;
+     flex-direction: row;
+ }
 
 .prime_button{
     margin: 10px;
-    color: white;
-}
-
-.prime_button:hover{
-    color:gold;
-    border-color: gold;
 }
