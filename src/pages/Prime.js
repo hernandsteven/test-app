@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";
-import styles from "./Prime.module.css";
-import { Button } from "primereact/button";
-import { Dropdown } from "primereact/dropdown";
-import "primeicons/primeicons.css";
-import "primereact/resources/themes/lara-light-blue/theme.css";
-import "primereact/resources/primereact.css";
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import styles from './Prime.module.css';
+import { Button } from 'primereact/button';
+import { Dropdown } from 'primereact/dropdown';
+import 'primeicons/primeicons.css';
+import 'primereact/resources/themes/lara-light-blue/theme.css';
+import 'primereact/resources/primereact.css';
+import axios from 'axios';
 
 let userSelectItems = [];
 
-const baseUrl = "https://jsonplaceholder.typicode.com/users/";
+const baseUrl = 'https://jsonplaceholder.typicode.com/users/';
 
 const Prime = () => {
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState('');
   const [users, setUsers] = useState({});
 
   useEffect(() => {
@@ -43,10 +43,10 @@ const Prime = () => {
           className={styles.prime_button}
           label="Prime Button"
           onClick={() => {
-            alert("prime");
+            alert('prime');
           }}
         />
-        <h5 style={{ color: "white", margin: "0" }}>User Select:</h5>
+        <h5 style={{ color: 'white', margin: '0' }}>User Select:</h5>
         <Dropdown
           style={{}}
           value={user}
@@ -56,7 +56,7 @@ const Prime = () => {
           }}
           placeholder="Select a user"
         />
-        <h5>Username: {user === "" ? "" : `${user}`}</h5>
+        <h5>Username: {user === '' ? '' : `${user}`}</h5>
       </div>
     </div>
   );
