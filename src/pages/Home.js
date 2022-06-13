@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { pathName } from '../App';
+import { Button } from 'primereact/button';
 import styles from './Home.module.css';
 
 const Home = () => {
@@ -14,6 +15,8 @@ const Home = () => {
       case 'Prime':
         navigate(pathName.PRIME);
         break;
+      case 'Todos':
+        navigate(pathName.TODOS);
       default:
     }
   };
@@ -22,18 +25,20 @@ const Home = () => {
     <div className={styles.home_container}>
       <h1 className={styles.home_header}>Test Application</h1>
       <div className={styles.home_button_row}>
-        <button
-          className={styles.home_button}
+        <Button
+          label="Take me to counter"
           onClick={() => handleButtonClick('Counter')}
-        >
-          Take me to counter
-        </button>
-        <button
-          className={styles.home_button}
+        />
+
+        <Button
+          label="Take me to prime"
           onClick={() => handleButtonClick('Prime')}
-        >
-          Take me to prime
-        </button>
+        />
+
+        <Button
+          label="Take me to todos"
+          onClick={() => handleButtonClick('Todos')}
+        />
       </div>
     </div>
   );

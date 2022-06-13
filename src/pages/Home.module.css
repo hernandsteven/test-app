@@ -1,20 +1,15 @@
 .home_container {
-    height: 100vh;
     display: flex;
-    flex-direction:column;
-    justify-content:center;
+    flex-direction: column;
     align-items: center;
+    height: 100vh;
     background-color: darkslateblue;
 }
 .home_header{
     color: white;
+    margin-top: 0;
 }
 .home_button_row {
-    display: flex;
-    flex-direction: row;
-    width: 25%;
-    justify-content: space-around;
-    border-bottom: 1px solid yellow;
 }
 .home_button {
     color: white;

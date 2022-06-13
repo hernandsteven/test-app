@@ -15,24 +15,23 @@ const Prime = () => {
   const [user, setUser] = useState('');
   const [users, setUsers] = useState({});
 
+  const getData = async (url, setFunction) => {
+    try {
+      let response = await axios.get(url);
+      setFunction(response.data);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   useEffect(() => {
-    const getData = async (url, setFunction) => {
-      try {
-        let response = await axios.get(url);
-        setFunction(response.data);
-      } catch (e) {
-        console.error(e);
-      }
-    };
-    /* */
     getData(baseUrl, setUsers);
-  }, []);
+  }, [users]);
 
   if (userSelectItems.length === 0 && users.length > 0) {
-    users.map((user) => {
+    users.forEach((user) => {
       userSelectItems.push({ label: user.name, value: user.name });
     });
-    console.log(userSelectItems);
   }
 
   return (
@@ -46,7 +45,9 @@ const Prime = () => {
             alert('prime');
           }}
         />
-        <h5 style={{ color: 'white', margin: '0' }}>User Select:</h5>
+
+        <h5 style={{ color: 'black', margin: '0' }}>User Select:</h5>
+
         <Dropdown
           style={{}}
           value={user}
@@ -56,6 +57,7 @@ const Prime = () => {
           }}
           placeholder="Select a user"
         />
+
         <h5>Username: {user === '' ? '' : `${user}`}</h5>
       </div>
     </div>
