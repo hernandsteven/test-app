@@ -1,9 +1,10 @@
 .prime_container{
+    padding: 10px;
     background-color: blueviolet;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: auto;
 }
 
 .prime_header {
@@ -18,7 +19,7 @@
     border:1px solid white;
     border-radius: 10px;
     width: 90vw;
-    height:100vh;
+    padding:10px;
 
 }
  .prime_component_row {
@@ -26,5 +27,75 @@
      flex-direction: row;
  }
 
-.prime_button{
+.prime_body_container {
+    outline: 1px solid white;
+    padding:10px;
+    display: flex;
+    width:100%;
+    flex:1;
+    align-items: baseline;
 }
+
+.box {
+    display:flex;
+    height: auto;
+    outline: 1px solid white;
+    height:200px;
+    flex:1;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.image {
+    height: 920px;
+    width: 1080px;
+    outline: 1px solid red;
+    color:white;
+}
+.carousel {
+    border-radius: 10px;
+    outline:1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height:97vh;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px;
+    margin-top: 1em;
+}
+.carousel > :first-child {
+    margin-left:20px;
+}
+.prime_body_container > :first-child {
+    height: 100px;
+    flex:2;
+}
+.prime_body_container > :nth-child(2)  {
+}
+.prime_body_container > :nth-child(3)  {
+    flex:2;
+    height: 500px;
+}
+.prime_body_container > :nth-child(4)  {
+    height: 100px;
+}
+.prime_body_container > :last-child{
+    flex:2;
+    height: 250px;
+}
+
+.carousel_paginator {
+}
+
+.carousel_paginator :hover {
+    background-color:red;
+}
+
+.p-carousel-indicator {
+    background-color: yellow;
+}
+

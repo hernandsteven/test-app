@@ -14,7 +14,12 @@ const Todos = () => {
     dispatch(fetchTodos());
   }, []);
 
-  return todosFetched ? (
+  return !todosFetched ? (
+    <>
+      <h1>Loading Todos ...</h1>
+    </>
+  )
+: (
     <div className={styles.todos_container}>
       <form
         onSubmit={(e) => {
@@ -36,15 +41,10 @@ const Todos = () => {
         </div>
         <input type="submit" value="Submit" />
       </form>
-      {todos.map(({ id, title, completed }) => {
-        return <Todo id={id} title={title} completed={completed} />;
+      {todos.map(({ id, title, completed },i) => {
+        return <Todo key={i} id={id} title={title} completed={completed} />;
       })}
     </div>
-  ) : (
-    <>
-      <h1>Loading Todos ...</h1>
-    </>
-  );
-};
+  ) };
 
 export default Todos;
